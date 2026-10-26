@@ -1,0 +1,31 @@
+{
+  "system": {
+    "agent_name": "Ghost Data Still Exists Deletion Audit Agent",
+    "version": "1.0.0",
+    "environment": "production"
+  },
+  "dataset": {
+    "base_directory": "dataset",
+    "deletion_requests": "deletion_requests.csv",
+    "sample_requests": "sample_deletion_requests.csv",
+    "sample_output": "sample_output.csv",
+    "user_identities": "user_identities.csv",
+    "user_audit_log": "user_audit_log.csv",
+    "deletion_rules": "deletion_rules.csv",
+    "evidence_files": "evidence_files.csv",
+    "system_activity": "system_activity.csv"
+  },
+  "execution": {
+    "deterministic_mode": true,
+    "sqlite_in_memory": true,
+    "trace_correlation": true,
+    "bipartite_export_matching": true,
+    "output_path": "output.csv"
+  },
+  "models": {
+    "provider": "local-deterministic",
+    "model_name": "gemini-3.8-flash-n-harness",
+    "api_calls": 0,
+    "estimated_cost_usd": 0.00
+  }
+}
